@@ -68,4 +68,10 @@ pequeña leyenda que dice "Desarrollado con ❤️ usando la API pública de Git
 <img width="933" height="907" alt="image" src="https://github.com/user-attachments/assets/23c3429a-7cbb-4e17-952e-86417e8a0c58" />
 
 ## Observaciones ##
-aunque 
+- cree una funcion de javascript para leer el formato de la fecha y poderla escribir como el sistema lo requeria.
+- cree varias funciones para ocultar o visualizar elementos graficos.
+- use el ID de elementos en HTML para visualizarlos u ocultarlos.
+- un framework ayuda muchisimo al desarrollo de estos proyectos, aunque es retador hacerlo en vanilla, no es algo que sea imposible de hacer.
+- el tiempo que me llevo terminar este proyecto fue de aproximadamente 7 horas y 14 minutos.
+
+
