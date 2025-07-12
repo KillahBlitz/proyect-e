@@ -36,6 +36,7 @@ primero mostramos la foto de perfil, nombre registrado, nombre de usuario, descr
 pude visualizar que en la pagina dada de referencia, si estos datos son nulos o no se reciben, estos no se muestran, no obstante
 en el caso de el nombre, este se sustituye por el nombre de usuario. Estas funcionalidades tambien fueron implementadas de la mejor
 manera posible a mi conocimiento.
+
 <img width="866" height="153" alt="image" src="https://github.com/user-attachments/assets/9abbdc30-c1bf-4b7d-9c26-273b8e813965" />
 
 
