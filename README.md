@@ -8,3 +8,5 @@ di estilo a el conjunto de elementos que conformaban la pagina web.
 # JavaScript
 Di funcionalidad a elementos desde la solicitud a la API, hasta reaccion de elementos HTML en diferentes casos que se presentasen.
 
+
+#### ELEMENTOS QUE CONFORMAN LA PAGINA ###
