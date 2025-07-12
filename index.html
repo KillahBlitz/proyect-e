@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="description" content="Aplicacion web donde consultas perfiles de GitHub con ciertas caracteristicas."/>
+        <title>App Consulta GitHub!!</title>
+
+        <!-- importar documento css para style -->
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="content">
+            <header class="header">
+                <div id="title">
+                    <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub Logo" width="30" height="30" id="logo">
+                    <h1>GitHub User Finder</h1>                
+                </div>
+                <div id="subtitle"><p>Busca el perfil detallado de cualquier usuario de GitHub.</p></div>
+            </header>
+            <div class="box-search">
+                <form id="search-form">
+                    <div id="instruction">
+                        <img src="https://cdn-icons-png.flaticon.com/512/25/25313.png" alt="Lupa icon" width="18" height="18">
+                        <h2>Buscar Usuario</h2>
+                    </div>
+                    <div id="context"><p>Introduce el nombre de usuario de GitHub para obtener su informacion</p></div>
+                    <div id="search-form-input">
+                        <input type="text" id="username" placeholder="Ej: KillahBlitz" required>
+                        <button type="submit" id="submit-btn" class="disabled">
+                            <img src="https://cdn-icons-png.flaticon.com/512/25/25313.png" alt="Lupa icon" width="12" height="12" id="search-icon">
+                            <span>Buscar</span>
+                        </button>
+                    </div>
+                </form>
+            </div>
+            <div class="box-results">
+                <div id="mensaje-error" class="error-oculto">
+                    <img src="https://icones.pro/wp-content/uploads/2021/05/symbole-d-avertissement-rouge.png" width="20px" height="20px" alt="Error" />
+                    <p>Usuario no encontrado</p>
+                </div>
+                <div id="user-info" class="user-info-oculto">
+                    <div class="user-basic-info">
+                        <div class="user-presentation">
+                            <img id="avatarGH" src="" alt="Avatar del usuario" class="avatar">
+                            <div class="user-details">
+                                <div class="user-name">
+                                    <h1 id="nameGH" class="nombre"></h1>
+                                    <span id="usernameGH" class="nombre-usuario"></span>
+                                </div>
+                                <div class="user-bio">
+                                    <span id="bioGH" class="biografia"></span>
+                                </div>
+                                <span id="locationGH" class="localizacion"></span>
+                                <span id="fecha-creacionGH" class="fecha"></span>
+                            </div>
+                        </div>
+                        <div class="user-stats">
+                            <div id="title-stats">
+                                <h2>Estadísticas</h2>
+                            </div>
+                            <div class="boxes">
+                                <div class="box-repositorys">
+                                    <div class="components">
+                                        <img src="https://cdn-icons-png.flaticon.com/512/4908/4908200.png" alt="Repositorios icon" width="25px" height="25px">
+                                        <h4 class="text-repositorys">Repositorios</h4>
+                                    </div>
+                                    <h2 id="num-repositoriosGH" class="number"></h2>
+                                </div>
+                                <div class="box-followers">
+                                    <div class="components">
+                                        <img src="https://cdn-icons-png.flaticon.com/512/1077/1077063.png" alt="Seguidores icon" width="25px" height="25px">
+                                        <h4 class="text-followers">Seguidores</h4>
+                                    </div>
+                                    <h2 id="num-seguidoresGH" class="number"></h2>
+                                </div>
+                                <div class="box-following">
+                                    <div class="components">
+                                        <img src="https://cdn-icons-png.flaticon.com/512/1077/1077062.png" alt="Siguiendo icon" width="25px" height="25px">
+                                        <h4 class="text-following">Siguiendo</h4>
+                                    </div>
+                                    <h2 id="num-siguiendoGH" class="number"></h2>
+                                </div>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="specific-info">
+                            <div id="title-stats">
+                                <h2>Informacion Detallada</h2>
+                            </div>
+                            <div class="elements">
+                                <div class="name">
+                                    <p class="title-name">Nombre completo:</p>
+                                    <span id="nameGHtwo"></span>
+                                </div>
+                                <div class="user">
+                                    <p class="title-user">Nombre de usuario:</p>
+                                    <div class="capsule">
+                                        <span id="usernameGHtwo"></span>    
+                                    </div>
+
+                                </div>
+                                <div class="repositories">
+                                    <p class="text-website">Repositorios publicos:</p>
+                                    <div class="ball">
+                                        <span id="num-repositoriosGHtwo"></span>
+                                    </div>
+                                </div>
+                                <div class="follows">
+                                    <p class="title-user">Seguidores:</p>\
+                                    <div class="ball">
+                                        <span id="num-seguidoresGHtwo"></span>
+                                    </div>
+                                </div>
+                                <div class="followings">
+                                    <p class="title-user">Siguiendo:</p>
+                                    <div class="ball">
+                                        <span id="num-siguiendoGHtwo"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="botones">
+                            <div class="githubbutton">
+                                <a id="github-url" class="git-button" href="" target="_blank">
+                                    <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub Logo" width="15" height="15" id="logo">
+                                    Ver Perfil en GitHub
+                                </a>
+                            </div>
+                            <div class="website-button">
+                                <a id="website" class="web-oculto" href="" target="_blank">🌐 Sitio Web</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <footer class="footer">
+                <p>Desarrollado con ❤️ usando la API pública de GitHub</p>
+            </footer>
+        </div>
+        <!-- Importar Axios para realizar peticiones HTTP -->
+        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script> 
+        <script src="script.js"></script>
+    </body>
+</html>

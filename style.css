@@ -1,0 +1,439 @@
+.html, body {
+    background-color: #ced2dd88;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    font-family: Arial, sans-serif;
+}
+
+.header{
+    justify-content: center;
+    align-items: center;
+}
+
+.header h1{
+    margin: 0;
+    margin-left: 10px;
+    padding: 15px 0;
+    font-size: 2em;
+}
+
+.header p{
+    margin: 0;
+    padding: 0;
+}
+
+.header, .content{
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#title{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    color: #333;
+
+}
+
+
+
+#subtitle{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    color: #666;
+}
+
+/* llamar a la clase box-search */
+.box-search{
+    width: 65%;
+    justify-self: center;
+    display: flex;
+    background-color: #f0f0f0;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+
+    padding: 0px 0px;
+    margin: 30px auto;
+    border-radius: 5px;
+}
+
+.box-search form {
+  padding: 30px 30px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background-color: white;
+}
+
+
+#instruction{
+    display: flex;
+    align-items: center;
+    color: #333;
+}
+
+#instruction h2{
+    margin: 0;
+    margin-left: 10px;
+    padding: 0;
+}
+
+
+#context{
+    display: flex;
+    color: #999999;
+    margin: 0;
+    padding: 0;
+}
+
+#context p{
+    font-size: 14px;
+    color: #666;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+
+#search-form-input {
+    width: 98%;
+    display: flex;
+    padding: 0;
+    margin: 0;
+    margin-top: 10px;
+    font-size: 16px;
+}
+
+#search-form-input input[type='text']{
+  width: 80%;
+  margin: 0 0;
+  padding: 10px 16px;
+  font-size: 14px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  background-color: transparent;
+}
+
+#search-form-input button[type='submit'] {
+  margin-left: 15px;
+  align-items: center;
+  padding: 10px 16px;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+  display: flex;
+  gap: 5px;
+}
+
+#search-icon {
+  filter: brightness(0) invert(1);
+}
+
+#search-form-input span{
+margin-left: 5px;
+}
+
+/* No hay caracteres en el input */
+#submit-btn.disabled {
+  background-color: #777;
+  cursor: default;
+  pointer-events: none;
+}
+
+/* Se ingreso al menos un caracter en el input */
+#submit-btn.active {
+  background-color: #000;
+  cursor: pointer;
+}
+
+
+.box-results{
+    width: 65%;
+    justify-self: center;
+    display: flex;
+    background-color: transparent;
+
+    padding: 0px 0px;
+    border-radius: 5px;
+}
+
+
+/*Para toda la funcionalidad de buscar usuarios*/
+
+/* para mensaje de error */
+#mensaje-error {
+    width: 100%;
+    align-items: center;
+    gap: 10px;
+    color: red;
+    font-size: 14px;
+    border: 1px solid red;
+    padding: 2px 10px;
+}
+
+.error-oculto {
+  display: none;
+}
+
+.error-visible {
+    display: flex;
+}
+
+/*Para un usuario encontrado*/
+#user-info {
+    width: 100%;
+    flex-direction: column;
+    justify-content: left;
+    padding: 20px;
+    background-color: #f9f9f9;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    margin-top: 0;
+    border-radius: 5px;
+}
+
+.user-info-oculto {
+    display: none;
+}
+
+.user-info-visible {
+    display: flex;
+}
+
+/*visibilidad de datos*/
+
+.user-basic-info {
+    
+    margin-bottom: 20px;
+}
+
+.user-presentation {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+.user-basic-info img {
+    margin-right: 20px;
+}
+
+.user-name {
+    display: flex;
+    flex-direction: column;
+}
+
+.user-name h1 {
+    margin: 0;
+    font-size: 24px;
+    color: #333;
+}
+
+.user-name span {
+    font-size: 18px;
+    color: #666;
+}
+
+.user-bio{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.biografia {
+    font-size: 16px;
+}
+
+.localizacion {
+    font-size: 14px;
+    color: #666;
+}
+
+.fecha {
+    font-size: 14px;
+    color: #666;
+}
+
+.user-stats {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+#title-stats {
+    font-size: 12px;
+    display: flex;
+    color: #333;
+}
+
+.boxes{
+    justify-content: center;
+    display: flex;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+
+.box-repositorys, .box-followers, .box-following {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 33%;
+    height: 90px;
+    border-radius: 10px;
+}
+
+.box-repositorys {
+    background-color: #01b7ff10;
+    color: #001aff;
+    
+}
+
+.box-followers {
+    background-color: #43df7710;
+    margin-left: 15px;
+    margin-right: 15px;
+    color: #1a6132;
+}
+
+.box-following {
+    background-color: #9901ff09;
+    color: #7700ff;
+}
+
+.components{
+    display: flex;
+    align-items: center;
+    margin: 0;
+}
+
+.number {
+    font-size: 24px;
+    margin-top: 0px;
+}
+
+hr {
+    width: 100%;
+    border-top: 1px solid #ccc;
+}
+
+.specific-info {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.elements {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+.name, .user, .repositories, .follows, .followings {
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 15px;
+}
+
+#nameGHtwo{
+    color: #555;
+}
+
+.capsule {
+    background-color: #f0f0f0;
+    padding: 5px;
+    border-radius: 25%;
+    margin-bottom: 10px;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+.ball {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    width: 20px;
+    height: 15px;
+    border-radius: 40%;
+    border: #9292925e solid 1px;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+.botones {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.botones a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 14px;
+}
+
+.git-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #000000;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.git-button img {
+    filter: invert(1);
+}
+
+#website {
+    align-items: center;
+    justify-content: center;
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 14px;
+    margin-left: 10px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+}
+
+.web-oculto {
+    display: none;
+}
+
+.web-visible {
+    display: flex;
+}
+
+.footer{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    font-size: 12px;
+    color: #777;
+}
